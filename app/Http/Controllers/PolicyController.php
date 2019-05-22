@@ -25,7 +25,7 @@ class PolicyController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -40,6 +40,15 @@ class PolicyController extends Controller
         $policy->number = $request->name;
         $policy->amount = $request->amount;
         $policy->save();
+
+        return response()->json(
+            [
+            "msg" => "exito",
+            "persona" => 'mero',
+        ],
+            200
+        );
+
 
     }
 
